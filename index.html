@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidamari</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400&family=Noto+Serif+JP:wght@400;500&family=Zen+Maru+Gothic:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrapper header_inner">
+            <h1 class="header_logo">
+                <a href="index.html">
+                    <img src="/img/logo/skin_logo_ol.webp" alt="ロゴ">
+                </a>
+            </h1>
+
+            <!-- ハンバーガーボタン -->
+            <button class="hamburger_btn" id="js-hamburger" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="header_nav_wrapper" id="js-nav">
+                <ul class="header_nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">My&nbsp;page</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="first_view" class="first_view">
+            <img src="/img/fv/fv.webp" alt="ファーストビュー">
+            <div class="fv_text">
+                <p class="fv_catch">あなたの肌を優しく包みこむ<br>新感覚のスキンケア</p>
+            </div>
+        </div>
+
+        <section id="worries">
+            <div class="wrapper">
+                <div class="worries_box">
+                    <div class="worries_text">
+                        <h3>素肌の悩み、<br class="br_txt">諦めていませんか？</h3>
+                        <p>
+                            自分に合うスキンケア用品がわからない。<br>
+                            使用しても、肌の乾燥やしわがなかなか改善されない。<br>
+                            敏感肌で肌が荒れやすく、素肌に自信が持てない。<br>
+                            Hidamariでは、お一人おひとりの肌悩みに寄り添い、豊富なラインナップをご用意しております。
+                        </p>
+                    </div>
+                    <img src="/img/main/main-hand.webp" alt="両手の写真" class="worries_img">
+                </div>
+            </div>
+        </section>
+
+        <section id="skin_point">
+            <div class="wrapper">
+                <h2>商品の<br class="br_txt">こだわりポイント</h2>
+
+                <div class="skin_box">
+                    <img src="/img/main/main-harb.webp" alt="ハーブの画像" class="skin_img">
+                    <div class="skin_text">
+                        <h3>厳選された植物由来成分</h3>
+                        <p>
+                            国内でも稀な、自社農園でのハーブ栽培から研究・販売までを一貫管理しております。<br>
+                            自然のパワーをそのまま閉じ込めた、お肌に優しい無添加処方。<br>
+                            植物本来の生命力を届け、使うたびに潤いに満ちた健やかな素肌へ導きます。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="skin_box">
+                    <img src="/img/main/main-spit.webp" alt="オイルの画像" class="skin_img">
+                    <div class="skin_text">
+                        <h3>肌タイプに合わせて<br class="br_txt">選べる豊富な種類</h3>
+                        <p>
+                            乾燥肌や敏感肌、ベタつきが気になるお肌など、悩みに寄り添うラインナップをご用意。<br>
+                            季節や体調でゆらぐお肌の変化に合わせて、自由にお選びいただけます。<br>
+                            お一人おひとりの肌質に合わせたアイテムで、理想の素肌づくりをお手伝いします。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="skin_box">
+                    <img src="/img/main/main-wmn.webp" alt="女性の画像" class="skin_img">
+                    <div class="skin_text">
+                        <h3>極上の香りで、リラックスタイムへ</h3>
+                        <p>
+                            毎日のお手入れを、一日の疲れをほぐす特別なリラックスタイムへ。<br>
+                            100%天然精油をブレンドしたやさしいハーブの香りが、肌と心を心地よく満たします。<br>
+                            忙しい毎日に寄り添う、ナチュラルで贅沢な香りの体験をお届けします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="user_voice">
+            <div class="wrapper">
+                <h2>User voice</h2>
+                <div class="uv_box">
+                    <img src="/img/main/main-uv.webp" alt="ユーザーの声の画像" class="uv_img">
+                    <div class="uv_text">
+                        <h3>スキンケア化粧水</h3>
+                        <p>
+                            とろみのあるテクスチャーがスッと馴染み、角層まで浸透して肌が潤います。<br>
+                            天然ハーブのやさしい香りに癒やされ、毎日のスキンケアが特別な楽しみに変わりました。<br>
+                            乾燥で荒れがちだったお肌も健やかに整い、今では手放せないお気に入りの一本です。
+                        </p>
+                    </div>
+                </div>
+                <div class="more_link_wrapper">
+                    <a href="#" class="more_link">View&nbsp;more&nbsp;&rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="wrapper">
+                <h2>Products</h2>
+
+                <div class="products_list">
+                    <div class="products_box">
+                        <img src="/img/products/prdcs-001.webp" alt="化粧水" class="products_img">
+                        <dl class="products_text">
+                            <dt>化粧水</dt>
+                            <dd>税込2,000円<br>角層までうるおいで満たす</dd>
+                        </dl>
+                    </div>
+
+                    <div class="products_box">
+                        <img src="/img/products/prdcs-002.webp" alt="乳液" class="products_img">
+                        <dl class="products_text">
+                            <dt>乳液</dt>
+                            <dd>税込2,000円<br>乾燥や外部刺激から肌を保護</dd>
+                        </dl>
+                    </div>
+
+                    <div class="products_box">
+                        <img src="/img/products/prdcs-003.webp" alt="クリーム" class="products_img">
+                        <dl class="products_text">
+                            <dt>ハンド&amp;リップクリーム</dt>
+                            <dd>税込1,800円<br>カサつく手や唇に潤いを与える</dd>
+                        </dl>
+                    </div>
+
+                    <div class="products_box">
+                        <img src="/img/products/prdcs-004.webp" alt="日焼け止め" class="products_img">
+                        <dl class="products_text">
+                            <dt>日焼け止め</dt>
+                            <dd>税込2,400円<br>紫外線を予防し、日中の乾燥をケア</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="more_link_wrapper">
+                    <a href="#" class="more_link">View&nbsp;more&nbsp;&rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="topics">
+            <div class="wrapper">
+                <h2>Topics</h2>
+                <ul class="topics_list">
+                    <li><a href="#">この夏におすすめの商品紹介。紫外線対策にもおすすめです。</a></li>
+                    <li><a href="#">サマーセールを実施いたします。</a></li>
+                    <li><a href="#">美容液プラスの販売を記念し、キャンペーンを開催いたします。</a></li>
+                    <li><a href="#">美容液プラスの販売を開始いたしました。</a></li>
+                </ul>
+                <div class="more_link_wrapper">
+                    <a href="#" class="more_link">View&nbsp;more&nbsp;&rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="try">
+            <div class="wrapper">
+                <h2 class="try_title">肌をもっと綺麗にしたいあなたへ</h2>
+                <div class="try_btn_wrapper">
+                    <a href="#" class="try_btn">商品を試してみる</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="form">
+            <h2>Contact</h2>
+            <div class="form_tel_wrapper">
+                <div class="form_tel_group">
+                    <span class="form_tel_label">無料電話</span>
+                    <span class="form_tel_number">XXX-XXXX-XXXX</span>
+                </div>
+                <span class="form_time">午前10時〜午後18時</span>
+            </div>
+            <div class="form_btn_wrapper">
+                <a href="#" class="form_btn">お問い合わせフォーム</a>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="wrapper">
+                <h2>FAQ</h2>
+                <ul class="topics_list">
+                    <li><a href="#">返品交換はできますか。</a></li>
+                    <li><a href="#">商品の購入には会員登録が必要でしょうか。</a></li>
+                    <li><a href="#">時間や日付の指定は可能でしょうか。また、変更は可能でしょうか。</a></li>
+                    <li><a href="#">返品対応は可能でしょうか。</a></li>
+                </ul>
+                <div class="more_link_wrapper">
+                    <a href="#" class="more_link">View&nbsp;more&nbsp;&rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrapper footer_wrapper">
+
+            <div class="footer_logo">
+                <img src="/img/logo/skin_logo_ol.webp" alt="ロゴ">
+            </div>
+
+            <div class="footer_menu_group">
+                <ul class="footer_nav">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">My page</a></li>
+                </ul>
+
+                <ul class="footer_sns">
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">LINE</a></li>
+                </ul>
+            </div>
+
+            <ul class="footer_links">
+                <li><a href="#">運営会社</a></li>
+                <li><a href="#">特定商取引法に基づく表記</a></li>
+                <li><a href="#">ソーシャルメディアポリシー</a></li>
+            </ul>
+
+            <small class="footer_copy">&copy;Hidamari All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <script src="/script/sctipt.js"></script>
+</body>
+
+</html>

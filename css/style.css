@@ -1,0 +1,761 @@
+@charset "UTF-8";
+
+/* =================================
+   1. 共通設定
+================================= */
+body {
+    font-family: "Zen Maru Gothic", sans-serif;
+    font-weight: 400;
+    color: #333;
+    background-color: #FAF9F5;
+    line-height: 1.85;
+    letter-spacing: 0.03em; /* 水平方向の字間のスペース */
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+a {
+    color: inherit;
+    text-decoration: none !important; /* テキストの下線を消す */
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section,
+footer {
+    margin-top: 120px;
+}
+
+section h2, .section_title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 35px;
+    letter-spacing: 0.1em;
+    color: #333;
+}
+
+
+/* =================================
+   2. ヘッダー
+================================= */
+header {
+    position: fixed; /* 要素を固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(250, 249, 245, 0.95);
+    z-index: 100; /* 重なり順 */
+}
+
+.hamburger_btn {
+    display: none; /* 非表示 */
+}
+
+.header_inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.header_logo a {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo img {
+    width: 120px;
+    height: auto;
+    display: block;
+}
+
+.header_nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header_nav a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #333;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    transition: opacity 0.3s; /* ホバーアニメーション */
+}
+
+.header_nav a:hover {
+    opacity: 0.6; /* 不透明度 */
+}
+
+
+/* =================================
+   3. ファーストビュー
+================================= */
+.first_view {
+    position: relative; /* 要素の位置指定 */
+    width: 100%;
+    margin-top: 70px;
+}
+
+.first_view img {
+    width: 100%;
+    height: calc(100vh - 70px);
+    object-fit: cover;
+    display: block;
+}
+
+.br_txt {
+    display: none;
+}
+
+.fv_text {
+    position: absolute; /* 要素の上に重ねる */
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%); /* 上下の方向を指定 */
+    z-index: 10;
+    color: #4A5D4E;
+}
+
+.fv_catch {
+    font-family: "Noto Serif JP", serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: 0.12em;
+}
+
+
+/* =================================
+   4. 素肌の悩み
+================================= */
+#worries {
+    padding: 60px 0;
+}
+
+.worries_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.worries_text h3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+}
+
+.worries_text p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.9;
+}
+
+.worries_img {
+    width: 360px;
+    height: 240px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+/* =================================
+   5. こだわりポイント
+================================= */
+#skin_point {
+    margin-top: 90px;
+}
+
+.skin_box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+}
+
+.skin_box:last-child {
+    margin-bottom: 0;
+}
+
+.skin_img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.skin_text h3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+}
+
+.skin_text p {
+    font-size: 0.92rem;
+    color: #333;
+    line-height: 1.85;
+}
+
+
+/* =================================
+   6. User voice / Products
+================================= */
+#user_voice, #products {
+    padding: 60px 0;
+}
+
+.uv_box {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.uv_img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+#user_voice h3,
+.uv_text h3 {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    color: #333;
+}
+
+.uv_text p {
+    font-size: 0.92rem;
+    line-height: 1.85;
+    color: #333;
+}
+
+.products_list {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.products_box {
+    text-align: center;
+    flex: 1;
+}
+
+.products_img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 要素の縦横比 */
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.products_text dt {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+}
+
+.products_text dd {
+    font-size: 0.82rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   7. Topics / FAQ / リンク
+================================= */
+#topics, #faq {
+    padding: 50px 0;
+}
+
+#faq h2,
+#user_voice h2,
+#topics h2,
+#products h2,
+#form h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    text-align: center;
+    color: #4A5D4E;
+    margin-bottom: 30px;
+    letter-spacing: 0.12em;
+}
+
+.topics_list {
+    list-style: none;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #c8c8c8;
+    padding: 0;
+}
+
+.topics_list li {
+    border-bottom: 1px solid #c8c8c8;
+    width: 100%;
+}
+
+.topics_list a {
+    display: block;
+    width: 100%;
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #333;
+    transition: opacity 0.3s;
+    box-sizing: border-box; /* 要素の幅や高さに、内側の余白や枠線の太さを含める */
+}
+
+.topics_list a:hover {
+    opacity: 0.6;
+}
+
+/* View more リンク領域 */
+.more_link_wrapper {
+    width: 100%;
+    text-align: right;
+    margin-top: 25px;
+}
+
+.more_link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #333;
+    letter-spacing: 0.08em;
+    display: inline-block;
+    transition: opacity 0.3s;
+}
+
+.more_link:hover {
+    text-decoration: underline !important; /* 文字に下線を引く */
+    opacity: 0.7;
+}
+
+
+/* =================================
+   8. Try
+================================= */
+#try {
+    padding: 30px 0 20px;
+    text-align: center;
+}
+
+.try_title {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.try_btn_wrapper {
+    text-align: center;
+}
+
+.try_btn {
+    display: inline-block;
+    width: 280px;
+    padding: 16px 0;
+    background-color: #c5b088;
+    color: #FAF9F5;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s;
+    border-radius: 2px;
+}
+
+.try_btn:hover {
+    opacity: 0.85;
+}
+
+
+/* =================================
+   9. Contact
+================================= */
+#form {
+    padding: 30px 0 40px;
+    text-align: center;
+}
+
+.form_tel_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form_tel_group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.form_tel_label {
+    font-size: 1.05rem;
+    color: #333;
+    line-height: 1;
+}
+
+.form_tel_number {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #333;
+    line-height: 1;
+}
+
+.form_time {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #666;
+    letter-spacing: 0.05em;
+    margin: 0 auto;
+}
+
+.form_btn_wrapper {
+    text-align: center;
+}
+
+.form_btn {
+    display: inline-block;
+    width: 280px;
+    padding: 16px 0;
+    background-color: #c5b088;
+    color: #FAF9F5;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s;
+    border-radius: 2px;
+}
+
+.form_btn:hover {
+    opacity: 0.85;
+}
+
+
+/* =================================
+   10. フッター
+================================= */
+footer {
+    background-color: #FAF9F5;
+    padding: 60px 0 40px;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.footer_wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer_logo {
+    margin-bottom: 30px;
+}
+
+.footer_logo img {
+    width: 140px;
+}
+
+/* PC版：メニューとSNSを上下に並べるグループ構造 */
+.footer_menu_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 35px;
+}
+
+.footer_nav, .footer_sns {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer a {
+    text-decoration: none !important;
+}
+
+footer a:hover {
+    text-decoration: none !important;
+    opacity: 0.7;
+}
+
+.footer_nav a, .footer_sns a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #333;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s;
+}
+
+.footer_links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 0;
+    flex-wrap: wrap; /* フレックスアイテムの折り返し */
+}
+
+.footer_links a {
+    font-size: 0.75rem;
+    color: #555;
+}
+
+.footer_copy {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.75rem;
+    color: #888;
+    letter-spacing: 0.05em;
+}
+
+
+/* =================================
+   11. レスポンシブ（スマホ対応）
+================================= */
+@media screen and (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    .header_logo {
+        position: relative;
+        z-index: 200;
+    }
+
+    .hamburger_btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        background: transparent;
+        border: none;
+        z-index: 200;
+        padding: 0;
+    }
+
+    .hamburger_btn span {
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        transition: all 0.3s ease;
+    }
+
+    /* ハンバーガーメニュー */
+    .hamburger_btn.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger_btn.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger_btn.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    .header_nav_wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(250, 249, 245, 0.98);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 150;
+    }
+
+    .header_nav_wrapper.active {
+        opacity: 1;
+        visibility: visible; /* 表示 */
+    }
+
+    .header_nav {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .header_nav a {
+        font-size: 1.2rem;
+    }
+
+    .first_view {
+        margin-top: 60px;
+        height: calc(100svh - 60px); 
+        overflow: hidden;
+        background-color: #FAF9F5;
+    }
+
+    .first_view img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        object-position: 65% center;
+    }
+
+    .fv_text {
+        position: absolute; /* 基準の要素に対して絶対的な位置を指定 */
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+        z-index: 10;
+    }
+
+    .fv_catch {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        white-space: nowrap; /* 改行なし */
+    }
+
+    #faq h2,
+    #user_voice h2,
+    #topics h2,
+    #products h2,
+    #form h2 {
+        font-size: 1.8rem;
+    }
+
+    .form_tel_group {
+        flex-direction: column; /* 子要素を縦一列に並べる */
+        gap: 5px;
+    }
+
+    .form_tel_number {
+        font-size: 1.3rem;
+    }
+
+    .worries_box,
+    .skin_box,
+    .uv_box {
+        flex-direction: column;
+    }
+
+    .worries_text h3,
+    .skin_text h3,
+    .uv_text h3,
+    #user_voice h3 {
+        text-align: center;
+    }
+
+    .worries_text p,
+    .skin_text p,
+    .uv_text p {
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .worries_img,
+    .skin_img,
+    .uv_img {
+        width: 100%;
+        height: auto;
+    }
+
+    .products_list {
+        flex-wrap: wrap;
+    }
+
+    .products_box {
+        flex-basis: 48%;
+    }
+
+    .br_txt {
+        display: inline;
+    }
+
+    .try_title {
+        font-size: 1rem;
+    }
+
+    /* スマホ版フッター：左右2列レイアウト化 */
+    .footer_menu_group {
+        flex-direction: row; /* 子要素を左から右へ横一列に並べる */
+        justify-content: center;
+        align-items: flex-start; /* 子要素をスタート位置にそろえる */
+        gap: 50px;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto 40px auto;
+        text-align: left;
+    }
+
+    .footer_nav, .footer_sns {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .footer_links {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 0.75rem;
+        margin-bottom: 30px;
+    }
+}
