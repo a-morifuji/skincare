@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hidamari</title>
 
+    <!-- PC用ファビコン (.ico) -->
+    <link rel="icon" href="./img/skincareFavicon_pc.ico" sizes="any">
+
+    <!-- スマホ・Apple端末用アイコン (.png) -->
+    <link rel="apple-touch-icon" href="./img/skincareFavicon_sp.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +24,10 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="loader-dot"></div>
+    </div>
+
     <header>
         <div class="wrapper header_inner">
             <h1 class="header_logo">
@@ -53,7 +63,7 @@
             </div>
         </div>
 
-        <section id="worries">
+        <section id="worries" class="fade-in">
             <div class="wrapper">
                 <div class="worries_box">
                     <div class="worries_text">
@@ -70,7 +80,7 @@
             </div>
         </section>
 
-        <section id="skin_point">
+        <section id="skin_point" class="fade-in">
             <div class="wrapper">
                 <h2>商品の<br class="br_txt">こだわりポイント</h2>
 
@@ -112,7 +122,7 @@
             </div>
         </section>
 
-        <section id="user_voice">
+        <section id="user_voice" class="fade-in">
             <div class="wrapper">
                 <h2>User voice</h2>
                 <div class="uv_box">
@@ -132,7 +142,7 @@
             </div>
         </section>
 
-        <section id="products">
+        <section id="products" class="fade-in">
             <div class="wrapper">
                 <h2>Products</h2>
 
@@ -176,7 +186,7 @@
             </div>
         </section>
 
-        <section id="topics">
+        <section id="topics" class="fade-in">
             <div class="wrapper">
                 <h2>Topics</h2>
                 <ul class="topics_list">
@@ -191,7 +201,7 @@
             </div>
         </section>
 
-        <section id="try">
+        <section id="try" class="fade-in">
             <div class="wrapper">
                 <h2 class="try_title">肌をもっと綺麗にしたいあなたへ</h2>
                 <div class="try_btn_wrapper">
@@ -200,7 +210,7 @@
             </div>
         </section>
 
-        <section id="form">
+        <section id="form" class="fade-in">
             <h2>Contact</h2>
             <div class="form_tel_wrapper">
                 <div class="form_tel_group">
@@ -214,15 +224,60 @@
             </div>
         </section>
 
-        <section id="faq">
+        <section id="faq" class="fade-in">
             <div class="wrapper">
                 <h2>FAQ</h2>
-                <ul class="topics_list">
-                    <li><a href="#">返品交換はできますか。</a></li>
-                    <li><a href="#">商品の購入には会員登録が必要でしょうか。</a></li>
-                    <li><a href="#">時間や日付の指定は可能でしょうか。また、変更は可能でしょうか。</a></li>
-                    <li><a href="#">返品対応は可能でしょうか。</a></li>
+
+                <ul class="faq_list">
+                    <li class="faq_item">
+                        <div class="faq_question">
+                            商品の返品・交換はできますか。
+                        </div>
+                        <div class="faq_detail">
+                            <dl>
+                                <dt>A. 商品の状態やご注文内容によって対応が異なります。</dt>
+                                <dd>返品・交換をご希望の場合は、商品到着後○日以内にお問い合わせください。詳しい条件については、返品・交換に関するご案内をご確認ください。</dd>
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li class="faq_item">
+                        <div class="faq_question">
+                            商品の購入には会員登録が必要でしょうか。
+                        </div>
+                        <div class="faq_detail">
+                            <dl>
+                                <dt>A. いいえ、会員登録なしでもご購入いただけます。</dt>
+                                <dd>必要な情報をご入力いただくだけで、スムーズにお買い物をお楽しみいただけます。</dd>
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li class="faq_item">
+                        <div class="faq_question">
+                            時間や日付の指定は可能でしょうか。また、変更は可能でしょうか。
+                        </div>
+                        <div class="faq_detail">
+                            <dl>
+                                <dt>A. はい、お届け日時のご指定が可能です。ご注文時にご希望のお届け日・時間帯をお選びください。</dt>
+                                <dd>ご注文確定後に変更をご希望の場合は、発送前にお問い合わせください。発送準備の状況によっては変更を承れない場合がございますので、あらかじめご了承ください。</dd>
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li class="faq_item">
+                        <div class="faq_question">
+                            送料はいくらですか。
+                        </div>
+                        <div class="faq_detail">
+                            <dl>
+                                <dt>A. 全国送料無料でお届けいたします。</dt>
+                                <dd>追加の送料はかかりませんので、安心してお買い物をお楽しみいただけます。</dd>
+                            </dl>
+                        </div>
+                    </li>
                 </ul>
+
                 <div class="more_link_wrapper">
                     <a href="#" class="more_link">View&nbsp;more&nbsp;&rarr;</a>
                 </div>
@@ -262,7 +317,7 @@
         </div>
     </footer>
 
-    <script src="script/sctipt.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

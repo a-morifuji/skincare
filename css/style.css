@@ -24,6 +24,10 @@ a {
     text-decoration: none !important; /* テキストの下線を消す */
 }
 
+ul {
+    list-style: none;
+}
+
 .wrapper {
     max-width: 1000px;
     margin: 0 auto;
@@ -43,6 +47,49 @@ section h2, .section_title {
     margin-bottom: 35px;
     letter-spacing: 0.1em;
     color: #333;
+}
+
+/* ローディング */
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAF9F5;
+    transition: opacity .5s ease;
+}
+    
+.loader-dot {
+    width: 60px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(circle closest-side,#4A5D4E 90%,transparent);
+    background:
+    var(--_g) 0% 50%,
+    var(--_g) 50% 50%,
+    var(--_g) 100% 50%;
+    background-size: calc(100% / 3) 50%;
+    animation: l3 1s infinite linear;
+}
+
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+
+/* フェードイン */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -349,6 +396,58 @@ header {
 .topics_list a:hover {
     opacity: 0.6;
 }
+
+/* FAQ */
+.faq_list {
+    border-top: 1px solid #c8c8c8;
+}
+
+.faq_list li {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.faq_question {
+    cursor: pointer;
+    position: relative;
+    padding: 20px 40px 20px 20px;
+}
+
+/* ＋ */
+.faq_question::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    text-align: center;
+    line-height: 1;
+}
+
+/* － */
+.faq_item.active .faq_question::after {
+    content: "-";
+}
+
+.faq_detail {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq_detail dl {
+    margin: 0;
+    padding: 20px;
+}
+
+.faq_detail dt {
+    margin-bottom: 10px;
+}
+
+.faq_detail dd {
+    margin: 0;
+}
+
 
 /* View more リンク領域 */
 .more_link_wrapper {
